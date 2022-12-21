@@ -1,0 +1,30 @@
+{% extends 'navigation.html' %}
+{% load static %}
+{% block a %}
+<div style="color:white;border:1px solid white;border-radius:8px;background-color:Green;padding:50px">
+    <div>
+<h3><strong>About Us</strong></h3><hr>
+    <table>
+        <th colspan="4"><h1 style="text-align: center;">Team Members</h1></th>
+        <tbody>
+            <tr>
+                <td><img src="{%static 'images\sadia.jpeg'%}" alt="" style="width: 250px; height:300px; margin: 2px;"></td>
+                <td><img src="{%static 'images\nashrat.jpeg'%}" alt="" style="width: 300px; height:300px;margin: 2px;"></td>
+                <td><img src="{%static 'images\nasif.jpeg'%}" alt="" style="width: 220px; height:300px;margin: 2px;"></td>
+                <td><img src="{%static 'images\kukur.jpg'%}" alt="" style="width: 250px; height:300px;margin: 2px;"></td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">Sadia Ahmed  <br> North South University <br> Computer Science and Engineering <br> 9th Semester</td>
+                <td style="text-align: center;">Md Nafiur Rahman  <br> North South University <br> Computer Science and Engineering <br> 9th Semester</td>
+                <td style="text-align: center;">Sheikh Tahmid Islam <br> North South University <br> Computer Science and Engineering <br> 9th Semester</td>
+                <td style="text-align: center;">Tausif Jahangir  <br> North South University <br> Computer Science and Engineering <br> 9th Semester</td>
+            </tr>
+        </tbody>
+        
+    </table>
+        <br><br><br><br><br><br><br><br>
+</div>
+
+</div>
+
+{% endblock %}

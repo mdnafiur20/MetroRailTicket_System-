@@ -1,0 +1,64 @@
+
+{% extends 'navigation2.html' %}
+{% load static %}
+{% block b %}
+<style>
+    input[type=text][type=password]{
+    border-radius:8px;
+    width:600px;
+    height:16px;
+    }
+</style>
+{% if error2 %}
+<script>
+alert('Record  Deleted Successfully')
+window.location({% url 'user_view_train' %})
+</script>
+{%  endif %}
+
+
+<div style="color:Black;border:1px solid white;border-radius:8px;background-color:white;padding:50px">
+
+<hr><h3><strong>All Added Train</strong></h3><hr>
+
+    <div class="container">
+<table class="noteCard table table-bordered" id="myTable">
+  <thead style="color:white;background-color:#333">
+  <tr>
+    <th>Sr No</th>
+    <th>Train Name</th>
+      <th>Train No.</th>
+      <th>From Station</th>
+    <th>To Station</th>
+    <th>Departure Time</th>
+       <th>Arrival Time</th>
+    <th>Travel Time</th>
+    <th>Distance</th>
+  </tr>
+  </thead>
+   <tbody>
+
+    {% for i in data2 %}
+
+  <tr>
+
+    <td>{{forloop.counter}}</td>
+    <td>{{i.trainname}}</td>
+    <td>{{i.train_no}}</td>
+      <td>{{i.from_city}}</td>
+      <td>{{i.to_city}}</td>
+      <td>{{i.departuretime}}</td>
+      <td>{{i.arrivaltime}}</td>
+      <td>{{i.trevaltime}}</td>
+      <td>{{i.distance}}</td>
+
+
+  </tr>
+
+    {% endfor %}
+    </tbody>
+</table>`
+
+ </div>
+</div>
+{% endblock %}
